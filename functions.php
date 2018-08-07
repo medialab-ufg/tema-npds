@@ -24,6 +24,10 @@ function new_post_types() {
 			'all_items' => 'All NPDs',
 			'singular_name' => 'NPD'
 		),
+		'show_in_rest' => true,
+		'supports' => [
+			'editor'
+		],
 		'menu_icon' => 'dashicons-align-left'
 	));
 }
@@ -44,6 +48,9 @@ function add_meta_box_fields( $post ) {
 	?>
 
 	<p>
+		<label for="mapas_culturais">
+			Link para página do NPD na plataforma Mapas Culturais. (ex: http://mapas.cultura.gov.br/espaco/1234)
+		</label>
 		<input type="text" class="widefat" name="mapas_culturais" id="mapas_culturais" value="<?php echo $mapas_culturais_box; ?>"/>
 	</p>
 	<?php
