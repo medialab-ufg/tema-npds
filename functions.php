@@ -26,7 +26,8 @@ function new_post_types() {
 		),
 		'show_in_rest' => true,
 		'supports' => [
-			'editor'
+			'editor',
+			'title'
 		],
 		'menu_icon' => 'dashicons-align-left'
 	));
@@ -80,3 +81,5 @@ function save_meta_box_fields( $post_id ) {
 	}
 }
 add_action( 'save_post', 'save_meta_box_fields' );
+
+require_once('inc/list-events-shortcode/listevents_shortcode.php');
