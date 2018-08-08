@@ -78,36 +78,38 @@ function showEvents(events){
     for (var i = 0; i < events.length; i++) {
         thumb = '';
         if(typeof events[i]['@files:avatar.avatarBig'] != 'undefined')
-            thumb = '<img src="' + events[i]['@files:avatar.avatarBig'].url + '" style="float: left;">';
+            thumb = '<img class="list_events_image" src="' + events[i]['@files:avatar.avatarBig'].url + '">';
 
         spaces = new Array();
 
         html += `<div class="row list_events_item">
-                    <div class="col-md-3">${thumb}</div>
-                    <div class="col-md-9">
-                        <h3><a href="${baseurl}/evento/${events[i].id}" target="_blank">${events[i].name}</a></h3>
-                        <p>${events[i].shortDescription}</p><br>`;
+                    <div class="col-md-6">${thumb}</div>
+                    <div class="col-md-6">
+                        <div class="list_events__box">
+                            <span class="list_events__category"><a href="${baseurl}/evento/${events[i].id}" target="_blank">${events[i].name}</a></span>
+                            <p class="list_events__description">${events[i].shortDescription}</p>`;
 
-                        periods = new Array();
-                        for (var y = 0; y < events[i].occurrences.length; y++) {
-                            if(typeof periods[events[i].occurrences[y].space.name] == 'undefined')
-                                periods[events[i].occurrences[y].space.name] = '';
 
-                            spaces[events[i].occurrences[y].space.name] = {
-                                name:events[i].occurrences[y].space.name,
-                            };
+                            periods = new Array();
+                            for (var y = 0; y < events[i].occurrences.length; y++) {
+                                if(typeof periods[events[i].occurrences[y].space.name] == 'undefined')
+                                    periods[events[i].occurrences[y].space.name] = '';
 
-                            periods[events[i].occurrences[y].space.name] +=
-                                `<li>
-                                    ${events[i].occurrences[y].rule.description}, ${events[i].occurrences[y].rule.price}
-                                </li>`;
-                        }
+                                spaces[events[i].occurrences[y].space.name] = {
+                                    name:events[i].occurrences[y].space.name,
+                                };
 
-                        for (space in spaces) {
-                            html += `<small><ul><b>${spaces[space].name}</b>${periods[spaces[space].name]}</ul></small>`;
-                        }
+                                periods[events[i].occurrences[y].space.name] +=
+                                    `<span class="details__date">
+                                        <i class="glyphicon glyphicon-time"></i> ${events[i].occurrences[y].rule.description}, ${events[i].occurrences[y].rule.price}
+                                    </span>`;
+                            }
 
-            html += '</div></div>';
+                            for (space in spaces) {
+                                html += `${periods[spaces[space].name]}<span class="details__place"><i class="glyphicon glyphicon-map-marker"></i> ${spaces[space].name}</span>`;
+                            }
+
+            html += '</div></div></div>';
     }
 
     jQuery('.list_spaces').append(html);
