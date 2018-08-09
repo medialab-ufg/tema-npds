@@ -37,15 +37,12 @@ jQuery( document ).ready(function() {
     jQuery('#date_listevents').on('apply.daterangepicker', function(ev, picker) {
         getEvents();
     });
-    jQuery('select#states_list').on('change', function() {
-        getEvents();
-    });
+    
 });
 
 function getEvents(){
     jQuery('.list_spaces').html('');
     jQuery('#loading').show('fast');
-    var states  =  jQuery('#states_list').val()
 
     var date_listevents = jQuery('#date_listevents').data('daterangepicker');
 
@@ -53,9 +50,9 @@ function getEvents(){
         '&@from='   + date_listevents.startDate.format('YYYY-MM-DD') +
         '&@to='     + date_listevents.endDate.format('YYYY-MM-DD');
 
-    if (states!="") {
-        url+=`&space:En_Estado=IN(${states})`;
-    }
+    //if (states!="") {
+    //    url+=`&space:En_Estado=IN(${states})`;
+    //}
     //console.log(url);
 
     jQuery('#date_listevents span').html(date_listevents.startDate.format('DD/MM/YYYY') + ' - ' + date_listevents.endDate.format('DD/MM/YYYY'));
