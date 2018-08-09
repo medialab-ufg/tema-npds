@@ -83,7 +83,7 @@ function save_meta_box_fields( $post_id ) {
 add_action( 'save_post', 'save_meta_box_fields' );
 
 /**
- * Para usar dentro do loop do post type NPDs
+ * Para usar dentro do loop do post type NPDs ou em uma single de NPG
  * Imprime a lista de eventos, conseguidas através dos Mapas Culturais
  * do NPD atual, desde que ele tenha o metadado do Mapas Culturais preenchido e válido 
  * 
@@ -105,9 +105,17 @@ function npds_the_events() {
 			echo do_shortcode('[list_events url=http://museus.cultura.gov.br space=' . $id . ']');
 		}
 	}
-	
-	
+}
+
+/**
+ * Imprime a lista de todos os eventos, conseguidas através dos Mapas Culturais
+ * 
+ */
+function npds_all_events() {
+
+	echo do_shortcode('[list_events url=http://museus.cultura.gov.br]');
 	
 }
 
 require_once('inc/list-events-shortcode/listevents_shortcode.php');
+require_once('inc/rewrite-rules.php');
