@@ -1,112 +1,119 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i');
 
-#states_list {
-  background: #fff;
-  cursor: pointer;
-  padding: 5px 10px;
-  border: 1px solid #ccc;
-  height: 32px;
+/* TÍTULOS */
+
+.title-1 {
+	font-weight: 500;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20pt;
+	color: #00245D;
+	line-height: normal;
+	border-bottom: 2px solid #008698;
 }
-#date_listevents {
-  margin-top: -40px;
-  padding: 5px 10px;
-  cursor: pointer;
-  border: 1px solid #ccc;
-  background: #fff;
+.title-1 a { color: #00245D; }
+
+/* FILTRO */
+
+#date_listevents { margin-top: 0; }
+.filter-box {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
 }
-.list_events .row.top {
-  margin-right: -30px;
-  margin-left: -30px;
+.filter-box:before,
+.filter-box:after {
+	content: "";
+	display: table;
+} 
+.filter-box:after { clear: both; }
+
+.box-states {
+	margin-top: 10px;
+	clear: both;
 }
-.list_spaces{ margin-top: 40px; }
+
+/* LISTA DE NPDs */
+
+.npds-list {
+	
+}
+.npds-list__item {
+
+}
+.npds-list__item p {
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14pt;
+	color: #4D4D4D;
+	line-height: normal;
+}
+.npds-list__read-more {
+	margin-top: 24px;
+	text-align: right;
+}
+.npds-list__read-more a {
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14pt;
+	color: #348898;
+	line-height: normal;
+}
 
 /* LISTA DE EVENTOS */
 
-.list_events_item { padding: 70px 0 90px; }
+.list_events_item {
+	margin-bottom: 0;
+	padding: 70px 0 90px;
+	background: none;
+}
 .list_events_item + .list_events_item { border-top: 2px solid #E7E7E7; }
 
-.list_events_image {
-  width: 100%;
-  display: block;
-  vertical-align: top;
+img.list_events_image {
+	width: 100%;
+	margin: 0 10px 10px 0;
+	display: block;
+	vertical-align: top;
+	float: none;
 }
 .list_events__category {
-  margin-bottom: 31px;
-  font-weight: 400;
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-  color: #00245D;
-  line-height: normal;
-  text-transform: uppercase;
-  display: block;
+	margin-bottom: 31px;
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	color: #00245D;
+	line-height: normal;
+	text-transform: uppercase;
+	display: block;
 }
 .list_events__category a { color: #00245D; }
 .list_events__description {
-  margin-bottom: 35px;
-  font-weight: 700;
-  font-family: 'Roboto', sans-serif;
-  font-size: 24px;
-  color: #434445;
-  line-height: normal;
+	margin-bottom: 35px;
+	font-weight: 700;
+	font-family: 'Roboto', sans-serif;
+	font-size: 24px;
+	color: #434445;
+	line-height: normal;
 }
 .details__date,
 .details__place {
-  padding-left: 45px;
-  font-weight: 400;
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-  color: #898E90;
-  line-height: normal;
-  display: block;
-  position: relative;
+	padding-left: 45px;
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	color: #898E90;
+	line-height: normal;
+	display: block;
+	position: relative;
 }
 .details__date i,
 .details__place i {
-  position: absolute;
-  top: 3px;
-  left: 0;
+	position: absolute;
+	top: 3px;
+	left: 0;
 }
 .details__date + .details__place { margin-top: 22px; }
 
-.spinner {
-  margin: 100px auto 0;
-  width: 70px;
-  text-align: center;
-}
-.spinner > div {
-  width: 18px;
-  height: 18px;
-  background-color: #333;
-  border-radius: 100%;
-  display: inline-block;
-  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-}
-.spinner .bounce1 {
-  -webkit-animation-delay: -0.32s;
-  animation-delay: -0.32s;
-}
-.spinner .bounce2 {
-  -webkit-animation-delay: -0.16s;
-  animation-delay: -0.16s;
-}
-
-@-webkit-keyframes sk-bouncedelay {
-  0%, 80%, 100% { -webkit-transform: scale(0) }
-  40% { -webkit-transform: scale(1.0) }
-}
-
-@keyframes sk-bouncedelay {
-  0%, 80%, 100% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-  } 40% {
-    -webkit-transform: scale(1.0);
-    transform: scale(1.0);
-  }
-}
-
 @media only screen and (max-width: 992px) {
-  .list_events__box { padding: 20px; }
-  .list_events_item { padding: 30px 0; }
+	.list_events__box { padding: 20px; }
+	.list_events_item { padding: 30px 0; }
 }
