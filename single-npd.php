@@ -12,6 +12,6 @@
 			<?php get_template_part('template-parts/loop', 'singular'); ?>
         </div>
     </div><!-- /.row -->
-	<?php echo do_shortcode('[list_events url=http://museus.cultura.gov.br ]'); ?>
+	<?php npds_the_events(); ?>
 </main>
 <?php get_footer(); ?>

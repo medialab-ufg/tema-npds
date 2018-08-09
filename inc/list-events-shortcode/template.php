@@ -1,30 +1,5 @@
 <div class="content list_events">
-	<div class="npds-list">
-		<?php
-			$npdList = new WP_Query(array(
-				'post_type' => 'NPD'
-			));
-			while($npdList -> have_posts()) {
-				$npdList -> the_post();
-		?>
-
-		<div class="npds-list__item">
-			<h2 class="title-1"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2">
-					<p><?php echo wp_trim_words(get_the_content(), 60); ?></p>
-					<div class="npds-list__read-more">
-						<a href="<?php the_permalink(); ?>">Leia mais...</a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<?php
-			}
-		?>
-	</div>
+	
 
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
