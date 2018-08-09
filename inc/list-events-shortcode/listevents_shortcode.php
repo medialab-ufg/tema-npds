@@ -27,17 +27,22 @@ class ListEventsShortcode {
 
         $params = [
             '@files'     => '(header.header,avatar.avatarBig):url',
-            '@select'    => 'name,shortDescription,occurrences.rule,occurrences.space.name,occurrences.space.endereco,occurrences.space.En_Municipio,occurrences.space.En_Estado&space',
+            '@select'    => 'name,shortDescription,occurrences.rule,occurrences.space.name,occurrences.space.endereco,occurrences.space.En_Municipio,occurrences.space.En_Estado',
             'space:type' => 'BET(20,29)'
         ];
 		
+		if (isset($atts['space']) && is_numeric($atts['space'])) {
+			$params['space'] = 'EQ(' . $atts['space'] . ')';
+		}
+		
 		$defautls = [
-			'title' => ''
+			'title' => 'Eventos'
 		];
 		
 		$atts = array_merge($atts, $defautls);
 
         $url = add_query_arg($params, $atts['url'] . '/api/event/findByLocation');
+		//var_dump($url); 
         $dataRange = 30;
         if (isset($atts['date_range'])) {
             $dataRange   = $atts['date_range'];

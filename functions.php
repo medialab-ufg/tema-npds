@@ -82,4 +82,32 @@ function save_meta_box_fields( $post_id ) {
 }
 add_action( 'save_post', 'save_meta_box_fields' );
 
+/**
+ * Para usar dentro do loop do post type NPDs
+ * Imprime a lista de eventos, conseguidas através dos Mapas Culturais
+ * do NPD atual, desde que ele tenha o metadado do Mapas Culturais preenchido e válido 
+ * 
+ */
+function npds_the_events() {
+
+	$post = get_post();
+	
+	if (!$post || !isset($post->post_type) || 'npd' != $post->post_type) {
+		return;
+	}
+	
+	$mapas_url = get_post_meta($post->ID, 'mapas_culturais', true);
+	
+	if ( preg_match_all('/^.+\/espaco\/(\d+)\/?$/', $mapas_url, $m) ) {
+		
+		if (isset($m[1][0])) {
+			$id = $m[1][0];
+			echo do_shortcode('[list_events url=http://museus.cultura.gov.br space=' . $id . ']');
+		}
+	}
+	
+	
+	
+}
+
 require_once('inc/list-events-shortcode/listevents_shortcode.php');
