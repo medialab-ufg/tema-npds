@@ -10,9 +10,6 @@
         <div class="col col-sm mx-sm-auto">
             
 			<?php get_template_part('template-parts/loop', 'singular'); ?>
-			
-			<?php do_shortcode('[list_events url=http://mapas.cultura.gov.br ]'); ?>
-			
         </div>
     </div><!-- /.row -->
 	<?php echo do_shortcode('[list_events url=http://museus.cultura.gov.br ]'); ?>
