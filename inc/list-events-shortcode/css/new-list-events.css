@@ -3,14 +3,28 @@
 /* TÍTULOS */
 
 .title-1 {
+	margin-bottom: 77px;
+	padding-bottom: 3px;
 	font-weight: 500;
 	font-family: 'Roboto', sans-serif;
 	font-size: 20pt;
 	color: #00245D;
 	line-height: normal;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
 	border-bottom: 2px solid #008698;
 }
 .title-1 a { color: #00245D; }
+.title-1 .extra-option {
+	padding: 0 15px 2px;
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14pt;
+	color: #06869D;
+	line-height: normal;
+	display: inline-block;
+}
 
 /* FILTRO */
 
@@ -34,12 +48,8 @@
 
 /* LISTA DE NPDs */
 
-.npds-list {
-	
-}
-.npds-list__item {
-
-}
+.npds-list { padding-bottom: 52px; }
+.npds-list__item + .npds-list__item { margin-top: 52px; }
 .npds-list__item p {
 	font-weight: 400;
 	font-family: 'Roboto', sans-serif;
@@ -112,6 +122,26 @@ img.list_events_image {
 	left: 0;
 }
 .details__date + .details__place { margin-top: 22px; }
+
+/* MUDANÇAS DO CSS ANTIGO */
+
+.tainacan-title .title-1 { margin-bottom: 0; }
+.tainacan-title { margin-bottom: 14px; }
+.tainacan-single-post .header-meta time { font-size: 14pt; }
+.tainacan-single-post article header .post-details {
+	margin-bottom: 70px;
+	font-size: 14pt;
+}
+.tainacan-single-post article .tainacan-content { margin-bottom: 118px; }
+.tainacan-single-post article .tainacan-content p {
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14pt;
+	color: #4D4D4D;
+	line-height: normal;
+}
+
+/* MEDIA QUERIES */
 
 @media only screen and (max-width: 992px) {
 	.list_events__box { padding: 20px; }

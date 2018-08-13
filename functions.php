@@ -17,6 +17,7 @@ add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function new_post_types() {
 	register_post_type('NPD',array(
 		'public' => true,
+		'has_archive' => true,
 		'labels' => array(
 			'name' => 'NPDs',
 			'add_new_item' => 'Add New NPD',
@@ -112,9 +113,7 @@ function npds_the_events() {
  * 
  */
 function npds_all_events() {
-
 	echo do_shortcode('[list_events url=http://museus.cultura.gov.br]');
-	
 }
 
 require_once('inc/list-events-shortcode/listevents_shortcode.php');

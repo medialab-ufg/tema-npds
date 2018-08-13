@@ -6,8 +6,8 @@
 <?php get_template_part( 'template-parts/menuBellowBanner' ); ?>
 
 <main role="main" class="mt-5 max-large margin-one-column">
-    <div class="row">
-        <div class="col col-sm mx-sm-auto">
+    <div class="row justify-content-md-center">
+		<div class="col-md-11">
             
 			<?php get_template_part('template-parts/loop', 'singular'); ?>
         </div>

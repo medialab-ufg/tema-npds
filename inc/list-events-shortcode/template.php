@@ -1,10 +1,13 @@
 <div class="content list_events">
-	
+	<div class="row justify-content-md-center">
+		<div class="col-md-11">
+			<h2 class="title-1"><?= $atts['title']; ?><a class="extra-option" href="#">Ver mais</a></h2>
+		</div>
+	</div>
 
-	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
+	<div class="row justify-content-md-center">
+		<div class="col-md-8">
 			<div class="filter-box">
-				<h3><?= $atts['title']; ?></h3>
 				<div id="date_listevents" data-range="<?= $dataRange; ?>" data-baseurl="<?= $atts['url']; ?>" data-url="<?= $url; ?>">
 					<i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
 					<span></span> <b class="caret"></b>

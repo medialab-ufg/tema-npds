@@ -79,9 +79,10 @@ function showEvents(events){
 
         spaces = new Array();
 
-        html += `<div class="row list_events_item">
-                    <div class="col-md-6">${thumb}</div>
-                    <div class="col-md-6">
+        html += `<div class="row no-gutters list_events_item">
+                    <div class="col-12 col-lg-5">${thumb}</div>
+                    <div class="col-1"></div>
+                    <div class="col-12 col-lg-6">
                         <div class="list_events__box">
                             <span class="list_events__category"><a href="${baseurl}/evento/${events[i].id}" target="_blank">${events[i].name}</a></span>
                             <p class="list_events__description">${events[i].shortDescription}</p>`;
