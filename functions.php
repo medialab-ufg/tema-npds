@@ -17,7 +17,6 @@ add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function new_post_types() {
 	register_post_type('NPD',array(
 		'public' => true,
-		'has_archive' => true,
 		'labels' => array(
 			'name' => 'NPDs',
 			'add_new_item' => 'Add New NPD',
@@ -30,7 +29,8 @@ function new_post_types() {
 			'editor',
 			'title'
 		],
-		'menu_icon' => 'dashicons-align-left'
+		'menu_icon' => 'dashicons-align-left',
+		'has_archive' => true
 	));
 }
 add_action('init','new_post_types');

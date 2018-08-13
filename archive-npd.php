@@ -12,7 +12,7 @@
 					the_post();
 				?>
 					<div class="npds-list__item">
-						<h2 class="title-1"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><a class="extra-option" href="#">Voltar</a></h2>
+						<h2 class="title-1"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><a class="extra-option" href="javascript:history.go(-1)">Voltar</a></h2>
 						<div class="row justify-content-md-center">
 							<div class="col-md-8">
 								<p><?php echo wp_trim_words(get_the_content(), 60); ?></p>

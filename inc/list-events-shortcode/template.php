@@ -1,7 +1,7 @@
 <div class="content list_events">
 	<div class="row justify-content-md-center">
 		<div class="col-md-11">
-			<h2 class="title-1"><?= $atts['title']; ?><a class="extra-option" href="#">Ver mais</a></h2>
+			<h2 class="title-1"><?= $atts['title']; ?><a class="extra-option" href="<?php echo site_url('/index.php/eventos'); ?>">Ver mais</a></h2>
 		</div>
 	</div>
 
