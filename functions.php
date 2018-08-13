@@ -27,9 +27,11 @@ function new_post_types() {
 		'show_in_rest' => true,
 		'supports' => [
 			'editor',
-			'title'
+			'title',
+			'page-attributes'
 		],
 		'menu_icon' => 'dashicons-align-left',
+		'hierarchical' => true,
 		'has_archive' => true
 	));
 }

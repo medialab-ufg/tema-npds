@@ -29,8 +29,7 @@
 				</div>
 			</div>
 		</div>
-
-		<?php npds_the_events(); ?>
+		
 <?php
 	}
 ?>
