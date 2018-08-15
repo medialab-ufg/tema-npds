@@ -124,11 +124,75 @@ function save_meta_box_npd( $post_id ) {
 	if ( ! current_user_can( 'edit_posts' ) ) {
 		return;
 	}
+	
+	
 
 	// Saving the data in meta box
 	// Saving the team designation in the meta box
 	if ( isset( $_POST[ 'mapas_culturais' ] ) ) {
-		update_post_meta( $post_id, 'mapas_culturais', sanitize_text_field( $_POST[ 'mapas_culturais' ] ) );
+		
+		
+		
+		$current_value = get_post_meta($post_id, 'mapas_culturais', true);
+		
+		if ($_POST['mapas_culturais'] == $current_value) {
+			return;
+		}
+		
+		if ( preg_match_all('/^.+\/espaco\/(\d+)\/?$/', $_POST[ 'mapas_culturais' ], $m) ) {
+			
+			update_post_meta( $post_id, 'mapas_culturais', sanitize_text_field( $_POST[ 'mapas_culturais' ] ) );
+			
+			if (isset($m[1][0])) {
+				$id = $m[1][0];
+				
+				$api_baseurl = 'http://mapas.cultura.gov.br/';
+				$fields = [
+					'id',
+					'location',
+					'name',
+					'emailPublico',
+					'emailPrivado',
+					'telefonePublico',
+					'endereco',
+					'En_Municipio',
+					'En_Estado',
+					'site',
+					'facebook',
+					'twitter',
+					'instagram'
+				];
+				
+				$query_url = $api_baseurl . "api/space/find?id=EQ($id)&@select=" . implode(',', $fields);
+				
+				$query = wp_remote_get($query_url);
+				
+				if ( isset($query['body']) ) {
+					
+					$response = json_decode($query['body']);
+					
+					if (is_array($response) && isset($response[0]) && is_object($response[0])) {
+						$response = $response[0];
+					} else {
+						return;
+					}
+					
+					foreach ( $fields as $field ) {
+						
+						if (isset($response->$field)) {
+							update_post_meta( $post_id, '_mapas_' . $field, $response->$field);
+						}
+						
+					}
+					
+				}
+				
+				
+				
+			}
+		}
+		
+		
 	}
 }
 add_action( 'save_post', 'save_meta_box_npd' );
