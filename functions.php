@@ -182,5 +182,12 @@ function npds_all_events() {
 	echo do_shortcode('[list_events url=http://museus.cultura.gov.br]');
 }
 
+add_action('pre_get_posts', function($query) {
+
+	if ($query->is_post_type_archive('npd') && $query->is_main_query()) {
+		$query->set('post_parent', 0);
+	}
+});
+
 require_once('inc/list-events-shortcode/listevents_shortcode.php');
 require_once('inc/rewrite-rules.php');
