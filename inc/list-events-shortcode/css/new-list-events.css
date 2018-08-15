@@ -126,7 +126,7 @@ img.list_events_image {
 /* MUDANÇAS DO CSS ANTIGO */
 
 .tainacan-title .title-1 { margin-bottom: 0; }
-.tainacan-title { margin-bottom: 14px; }
+.tainacan-title { margin-bottom: 20px; }
 .tainacan-single-post .header-meta time { font-size: 14pt; }
 .tainacan-single-post article header .post-details {
 	margin-bottom: 70px;
@@ -140,6 +140,67 @@ img.list_events_image {
 	color: #4D4D4D;
 	line-height: normal;
 }
+
+/*
+- LISTA DE PROFISSIONAIS
+*/
+
+.lista-profissionais .row + .row > div { margin-top: 70px; }
+.lista-profissionais__item {
+	display: flex;
+	justify-content: space-between;
+}
+.lista-profissionais__imagem {
+	width: 100%;
+	max-width: 210px;
+	height: 240px;
+	margin-right: 20px;
+	background-color: #ccc;
+}
+.lista-profissionais__texto { width: 100%; }
+.lista-profissionais__categoria {
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14pt;
+	color: #00245D;
+	line-height: normal;
+	text-transform: uppercase;
+	display: block;
+}
+.lista-profissionais__nome {
+	font-weight: 700;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16pt;
+	color: #000;
+	line-height: normal;
+	text-transform: uppercase;
+	display: block;
+}
+.lista-profissionais__dado {
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14pt;
+	color: #000;
+	line-height: normal;
+	display: block;
+}
+.lista-profissionais__categoria + .lista-profissionais__nome,
+.lista-profissionais__categoria + .lista-profissionais__dado { margin-top: 21px; }
+.lista-profissionais__nome + .lista-profissionais__dado { margin-top: 32px; }
+.lista-profissionais__dado + .lista-profissionais__dado { margin-top: 7px; }
+
+/*
+- PAGINAÇÃO
+*/
+
+.paginacao-tainacan .margin-pagination {
+	padding: 0 3rem;
+	border-top: 1pt solid #D5D5D5 !important;
+}
+
+/* REGRAS GERAIS */
+
+.tainacan-details { margin-bottom: 63px; }
 
 /* MEDIA QUERIES */
 

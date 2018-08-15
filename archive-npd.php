@@ -27,6 +27,10 @@
 				?>
 
 				</div>
+
+				<div class="paginacao-tainacan">
+					<?php echo tainacan_pagination(3); ?>
+				</div>
 			</div>
 		</div>
 		
