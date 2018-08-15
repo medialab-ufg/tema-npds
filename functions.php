@@ -184,7 +184,7 @@ function npds_all_events() {
 
 add_action('pre_get_posts', function($query) {
 
-	if ($query->is_post_type_archive('npd') && $query->is_main_query()) {
+	if (!is_admin() && $query->is_post_type_archive('npd') && $query->is_main_query()) {
 		$query->set('post_parent', 0);
 	}
 });
