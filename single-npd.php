@@ -30,7 +30,7 @@
                         <div class="col-md-8">
                             <p><?php echo wp_trim_words($child->post_content, 60); ?></p>
                             <div class="npds-list__read-more">
-                                <a href="<?php get_permalink($child->ID); ?>">Leia mais...</a>
+                                <a href="<?php echo get_permalink($child->ID); ?>">Leia mais...</a>
                             </div>
                         </div>
                     </div>
@@ -41,7 +41,15 @@
 
 
         </div>
-        <?php npds_the_events(); ?>
+		
+        <?php if ($post->post_parent == 0): ?>
+			<?php npds_the_events(); ?>
+
+			<!-- Contato... -->
+		
+		<?php endif; ?>
+		
+		
     </div><!-- /.row -->
 
 </main>
