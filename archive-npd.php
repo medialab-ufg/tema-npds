@@ -11,7 +11,7 @@
 				while ( have_posts() ) {
 					the_post();
 				?>
-					<div class="npds-list__item">
+					<div class="npds-list__item jlk">
 						<h2 class="title-1"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><a class="extra-option" href="javascript:history.go(-1)">Voltar</a></h2>
 						<div class="row justify-content-md-center">
 							<div class="col-md-8">
@@ -33,7 +33,6 @@
 				</div>
 			</div>
 		</div>
-		
 <?php
 	}
 ?>

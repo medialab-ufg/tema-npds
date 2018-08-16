@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i');
 
-/* TÍTULOS */
+/*
+- TÍTULOS
+*/
 
 .title-1 {
 	margin-bottom: 77px;
@@ -26,7 +28,9 @@
 	display: inline-block;
 }
 
-/* FILTRO */
+/*
+- FILTRO
+*/
 
 #date_listevents { margin-top: 0; }
 .filter-box {
@@ -46,7 +50,9 @@
 	clear: both;
 }
 
-/* LISTA DE NPDs */
+/*
+- LISTA DE NPDs
+*/
 
 .npds-list { padding-bottom: 52px; }
 .npds-list__item + .npds-list__item { margin-top: 52px; }
@@ -69,7 +75,9 @@
 	line-height: normal;
 }
 
-/* LISTA DE EVENTOS */
+/*
+- LISTA DE EVENTOS
+*/
 
 .list_events_item {
 	margin-bottom: 0;
@@ -190,6 +198,62 @@ img.list_events_image {
 .lista-profissionais__dado + .lista-profissionais__dado { margin-top: 7px; }
 
 /*
+- LISTA DE CONTATO
+*/
+
+.box-contato .tainacan-title { margin-bottom: 137px; }
+.box-contato dt {
+	font-weight: 700;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14pt;
+	color: #000;
+	line-height: normal;
+	display: block;
+}
+.box-contato dd {
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14pt;
+	color: #000;
+	line-height: normal;
+	word-break: break-word;
+	display: block;
+}
+.box-contato dd + dt { margin: 22px 0 0; }
+
+/* FORMULÁRIO DE CONTATO */
+
+.form-style {
+
+}
+.form-style legend {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	border: 0;
+}
+.form-style {
+
+}
+.form-style {
+
+}
+.form-style {
+
+}
+.form-style {
+
+}
+.form-style {
+
+}
+
+
+/*
 - PAGINAÇÃO
 */
 
@@ -198,11 +262,27 @@ img.list_events_image {
 	border-top: 1pt solid #D5D5D5 !important;
 }
 
-/* REGRAS GERAIS */
+/*
+- BREADCRUMB
+*/
+
+nav[aria-label='breadcrumb'] { border: none; }
+nav[aria-label='breadcrumb'] .breadcrumb {
+	margin-left: 0;
+	margin-bottom: 0;
+}
+.breadcrumb-item + .breadcrumb-item { padding-left: 5px; }
+.breadcrumb-item + .breadcrumb-item::before { padding-right: 5px; }
+
+/*
+- REGRAS GERAIS
+*/
 
 .tainacan-details { margin-bottom: 63px; }
 
-/* MEDIA QUERIES */
+/*
+- MEDIA QUERIES
+*/
 
 @media only screen and (max-width: 992px) {
 	.list_events__box { padding: 20px; }
