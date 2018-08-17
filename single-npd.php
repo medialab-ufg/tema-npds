@@ -72,32 +72,33 @@
                             </dl>
                         </div>
                         <div class="col-md-6">
-                            <form class="form-style" action="#" method="post">
+                            <h3 class="title-1 title-1--no-border">Mande sua mensagem</h3>
+                            <form class="form-style form-validar" action="#" method="post">
                                 <fieldset>
                                     <legend>Formulário de contato</legend>
 
                                     <div class="linha">
-                                        <label for="">Nome</label>
-                                        <input type="text" id="" class="">
+                                        <label for="contato-nome">Nome</label>
+                                        <input type="text" id="contato-nome" class="obrigatorio">
                                     </div>
 
                                     <div class="linha">
-                                        <label for="">E-mail</label>
-                                        <input type="text" id="" class="">
+                                        <label for="contato-email">E-mail</label>
+                                        <input type="text" id="contato-email" class="obrigatorio-email">
                                     </div>
 
                                     <div class="linha">
-                                        <label for="">Assunto</label>
-                                        <input type="text" id="" class="">
+                                        <label for="contato-assunto">Assunto</label>
+                                        <input type="text" id="contato-assunto" class="obrigatorio">
                                     </div>
 
                                     <div class="linha">
-                                        <label for="">Escreva sua mensagem aqui.</label>
-                                        <textarea id="" class="" cols="30" rows="10"></textarea>
+                                        <label for="contato-mensagem">Escreva sua mensagem aqui.</label>
+                                        <textarea id="contato-mensagem" cols="30" rows="10" class="obrigatorio"></textarea>
                                     </div>
 
                                     <div class="linha">
-                                        <input type="submit" id="" class="" value="Enviar">
+                                        <input type="submit" value="Enviar">
                                     </div>
                                 </fieldset>
                             </form>
@@ -108,4 +109,9 @@
         </div>
     <?php endif; ?>
 </main>
+
+<script>
+    moverLabels();
+    validarFormulario();
+</script>
 <?php get_footer(); ?>

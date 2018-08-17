@@ -27,6 +27,11 @@
 	line-height: normal;
 	display: inline-block;
 }
+.title-1--no-border {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
 
 /*
 - FILTRO
@@ -223,9 +228,7 @@ img.list_events_image {
 
 /* FORMULÁRIO DE CONTATO */
 
-.form-style {
-
-}
+.title-1 + .form-style { margin-top: 33px; }
 .form-style legend {
 	position: absolute;
 	width: 1px;
@@ -236,22 +239,90 @@ img.list_events_image {
 	clip: rect(0,0,0,0);
 	border: 0;
 }
-.form-style {
-
+.form-style .linha { position: relative; }
+.form-style .linha + .linha { margin-top: 15px; }
+.form-style label {
+	font-weight: 400;
+	font-size: 14pt;
+	color: #7D7A7D;
+	line-height: 37px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 11px;
+	transition: transform 200ms ease-in-out, font-size 200ms ease-in-out;
 }
-.form-style {
-
+.form-style input[type=text],
+.form-style textarea {
+	width: 100%;
+	height: 37px;
+	padding: 0 10px;
+	font-weight: 400;
+	font-size: 14pt;
+	color: #7D7A7D;
+	line-height: 37px;
+	outline: none;
+	border: 1px solid #e5e5e5;
 }
-.form-style {
-
+.form-style textarea {
+	height: 138px;
+	padding: 6px 10px 0;
+	line-height: normal;
+	resize: none;
 }
-.form-style {
-
+.form-style input[type=submit] {
+	width: 100%;
+	max-width: 104px;
+	height: 39px;
+	font-weight: 400;
+	font-size: 14pt;
+	color: #fff;
+	cursor: pointer;
+	outline: none;
+	border-radius: 6px;
+	border: none;
+	background-color: #25a189;
+	transition: background-color 200ms ease-in-out;
 }
-.form-style {
 
+/* HOVER */
+
+.form-style input[type=text]:focus,
+.form-style textarea:focus { border: 1px solid #898d8f; }
+
+/* LABEL FIXO ACIMA DO CAMPO */
+
+.form-style .linha.ativa label {
+	transform: translate(0,-24px);
+	font-size: 8pt;
 }
 
+/* VALIDAÇÃO DOS DADOS */
+
+.form-style .erro label,
+.form-style .erro input[type=text],
+.form-style .erro textarea {
+	color: #C24A4A !important;
+	border-color: #F0DBDD !important;
+	background-color: #F0DBDD !important;
+}
+.form-style .erro label { background: none !important; }
+
+.form-style .sucesso label,
+.form-style .sucesso input[type=text],
+.form-style .sucesso textarea {
+	color: #3AA993 !important;
+	border-color: #D3EDE7 !important;
+	background-color: #D3EDE7 !important;
+}
+.form-style .sucesso label { background: none !important; }
+
+/* Hover da validação */
+
+.form-style .erro input[type=text]:focus,
+.form-style .erro textarea:focus { border-color: #C24A4A !important; }
+.form-style .sucesso input[type=text]:focus,
+.form-style .sucesso textarea:focus { border-color: #3AA993 !important; }
 
 /*
 - PAGINAÇÃO
