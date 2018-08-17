@@ -57,7 +57,7 @@ add_action('init','new_post_types');
 
 // Criando os meta boxes
 function add_custom_meta_box() {
-	add_meta_box( 'meta-box-mapas-culturais', 'Link para mapas culturais', 'add_meta_box_npd', 'NPD' );
+	add_meta_box( 'meta-box-mapas-culturais', 'Link para mapas culturais', 'add_meta_box_npd', 'NPD', 'side' );
 	add_meta_box( 'meta-box-profissionais', 'Dados complementares', 'add_meta_box_profissionais', 'profissional' );
 }
 add_action( 'add_meta_boxes', 'add_custom_meta_box' );
