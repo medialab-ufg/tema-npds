@@ -135,7 +135,7 @@ function save_meta_box_npd( $post_id ) {
 		
 		$current_value = get_post_meta($post_id, 'mapas_culturais', true);
 		
-		if ($_POST['mapas_culturais'] == $current_value) {
+		if ($_POST['mapas_culturais'] == $current_value && get_post_meta($post_id, '_mapas_id', true)) {
 			return;
 		}
 		
@@ -306,6 +306,8 @@ add_action('pre_get_posts', function($query) {
 
 	if (!is_admin() && $query->is_post_type_archive('npd') && $query->is_main_query()) {
 		$query->set('post_parent', 0);
+		$query->set('orderby', 'meta_value');
+		$query->set('meta_key', '_mapas_En_Municipio');
 	}
 });
 
