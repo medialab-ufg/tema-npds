@@ -7,11 +7,11 @@ function theme_enqueue_styles() {
 
 	wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
 	wp_enqueue_style( 'child-style',
-		get_stylesheet_directory_uri() . '/style.css',
+	get_stylesheet_directory_uri() . '/style.css',
 		array( $parent_style )
 	);
 }
-add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
+add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles', 99 );
 
 // Criando novos post types
 function new_post_types() {
@@ -57,7 +57,7 @@ add_action('init','new_post_types');
 
 // Criando os meta boxes
 function add_custom_meta_box() {
-	add_meta_box( 'meta-box-mapas-culturais', 'Link para mapas culturais', 'add_meta_box_npd', 'NPD' );
+	add_meta_box( 'meta-box-mapas-culturais', 'Link para mapas culturais', 'add_meta_box_npd', 'NPD', 'side' );
 	add_meta_box( 'meta-box-profissionais', 'Dados complementares', 'add_meta_box_profissionais', 'profissional' );
 }
 add_action( 'add_meta_boxes', 'add_custom_meta_box' );
@@ -135,7 +135,7 @@ function save_meta_box_npd( $post_id ) {
 		
 		$current_value = get_post_meta($post_id, 'mapas_culturais', true);
 		
-		if ($_POST['mapas_culturais'] == $current_value) {
+		if ($_POST['mapas_culturais'] == $current_value && get_post_meta($post_id, '_mapas_id', true)) {
 			return;
 		}
 		
@@ -306,6 +306,8 @@ add_action('pre_get_posts', function($query) {
 
 	if (!is_admin() && $query->is_post_type_archive('npd') && $query->is_main_query()) {
 		$query->set('post_parent', 0);
+		$query->set('orderby', 'meta_value');
+		$query->set('meta_key', '_mapas_En_Municipio');
 	}
 });
 

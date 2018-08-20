@@ -5,6 +5,24 @@
 <!-- Get the menu if is create in panel admin -->
 <?php get_template_part( 'template-parts/menuBellowBanner' ); ?>
 
+<?php if ($post->post_parent > 0): ?>
+	
+	<?php $ancestors = get_post_ancestors(get_the_ID()); ?>
+	
+	<div class="row justify-content-md-center max-large no-gutters">
+		<div class="col-md-11">
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb">
+					<?php foreach ($ancestors as $ancestor): ?>
+						<li class="breadcrumb-item"><a href="<?php echo get_permalink($ancestor); ?>"><?php echo get_the_title($ancestor); ?></a></li>
+					<?php endforeach; ?>
+					<li class="breadcrumb-item active" aria-current="page"><?php the_title(); ?></li>
+				</ol>
+			</nav>
+		</div>
+	</div>
+<?php endif; ?>
+
 <main role="main" class="mt-5 max-large px-4 px-md-0">
 	<?php get_template_part('template-parts/loop', 'singular'); ?>
 
