@@ -28,7 +28,9 @@
 										<div class="lista-profissionais__imagem">
 											<?php if ( has_post_thumbnail() ) {
 												the_post_thumbnail();
-											} ?>
+											} else { ?>
+												<img src="<?php echo get_theme_file_uri('/assets/images/perfil.png') ?>" alt="<?php the_title(); ?>">
+											<?php } ?>
 										</div>
 										<div class="lista-profissionais__texto">
 											<span class="lista-profissionais__categoria"><?php the_terms( $post->ID, 'type-area', '', ', ', ' ' );?></span>
