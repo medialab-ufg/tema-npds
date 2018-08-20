@@ -239,7 +239,7 @@ add_action( 'save_post', 'save_meta_box_profissional' );
 
 function create_taxonomy_type() {
 	register_taxonomy(
-		'type-area',
+		'area_profissional',
 		'profissional',
 		array(
 			'labels' => array(
@@ -254,7 +254,7 @@ function create_taxonomy_type() {
 		)
 	);
 	register_taxonomy(
-		'type_especialidade',
+		'especialidade_profissional',
 		'profissional',
 		array(
 			'labels' => array(

@@ -28,9 +28,9 @@
 						} ?>
 					</div>
 					<div class="lista-profissionais__texto">
-						<span class="lista-profissionais__categoria"><?php the_terms( $post->ID, 'type-area', '', ', ', ' ' );?></span>
+						<span class="lista-profissionais__categoria"><?php the_terms( $post->ID, 'area_profissional', '', ', ', ' ' );?></span>
 						<strong class="lista-profissionais__nome"><?php the_title(); ?></strong>
-						<span class="lista-profissionais__dado"><?php the_terms( $post->ID, 'type_especialidade', '<b>Especialidades:</b> ', ', ', ' ' );?></span>
+						<span class="lista-profissionais__dado"><?php the_terms( $post->ID, 'especialidade_profissional', '<b>Especialidades:</b> ', ', ', ' ' );?></span>
 						<span class="lista-profissionais__dado"><b>Cidade:</b> <?php echo get_post_meta($post->ID, 'profissionais_cidade', true); ?> - <?php echo get_post_meta($post->ID, 'profissionais_estado', true); ?></span>
 						<span class="lista-profissionais__dado"><b>Telefone:</b> <?php echo get_post_meta($post->ID, 'profissionais_telefone', true); ?></span>
 						<span class="lista-profissionais__dado"><b>E-mail:</b> <?php echo get_post_meta($post->ID, 'profissionais_email', true); ?></span>
