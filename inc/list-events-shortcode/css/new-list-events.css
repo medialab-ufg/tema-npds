@@ -140,6 +140,7 @@ img.list_events_image {
 
 .tainacan-title .title-1 { margin-bottom: 0; }
 .tainacan-title { margin-bottom: 20px; }
+.tainacan-title--type-b { margin-bottom: 115px; }
 .tainacan-single-post .header-meta time { font-size: 14pt; }
 .tainacan-single-post article header .post-details {
 	margin-bottom: 70px;
@@ -348,6 +349,74 @@ nav[aria-label='breadcrumb'] .breadcrumb {
 }
 .breadcrumb-item + .breadcrumb-item { padding-left: 5px; }
 .breadcrumb-item + .breadcrumb-item::before { padding-right: 5px; }
+
+/*
+- MAPAS
+*/
+
+.npds-mapas {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.npds-mapas li {
+	padding: 0 0 70px 35px;
+	position: relative;
+}
+.npds-mapas li:after {
+	content: "";
+	width: 11px;
+	height: 11px;
+	display: block;
+	position: absolute;
+	top: 7px;
+	left: 0;
+	border-radius: 50%;
+	background-color: #4D4D4D;
+}
+.mapas-cidade {
+	padding: 0;
+	font-weight: 700;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16pt;
+	color: #4D4D4D;
+	line-height: normal;
+	cursor: pointer;
+	display: block;
+	border: none;
+	background: none;
+}
+.mapas-cidade.dropdown-toggle::after {
+	margin-left: 14px;
+	color: #318192;
+	vertical-align: 3px;
+	transition: transform 200ms ease-in-out;
+}
+.mapas-detalhes {
+	margin: 41px 0 15px;
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14pt;
+	color: #898E90;
+	line-height: normal;
+	display: block;
+}
+.mapas-detalhes a { color: #898E90; }
+.mapas-box {
+	width: 100%;
+	max-height: 0;
+	overflow: hidden;
+}
+.npds-mapas .ativo .mapas-box { max-height: 10000px; }
+.npds-mapas .ativo .mapas-cidade.dropdown-toggle::after { transform: rotate(-180deg); }
+
+/* GOOGLE MAPS */
+
+.mapas-map {
+	width: 100%;
+	height: 350px;
+	background-color: grey;
+}
 
 /*
 - REGRAS GERAIS

@@ -161,7 +161,6 @@ function moverLabels() {
  * @param   
  * @author  Alvino Rodrigues
 */
-
 function validarFormulario() {
     jQuery('.form-validar').on('submit',function() {
         var _form = jQuery(this),
@@ -207,7 +206,6 @@ function validarFormulario() {
  * @param   string email
  * @author  Alvino Rodrigues
 */
-
 function validarEmail(email) {
     var expr = /^\w+([\.+-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
@@ -216,4 +214,17 @@ function validarEmail(email) {
     }
 
     return true;
+}
+
+/*
+ * Exibe/Esconde os itens da lista de mapas
+ *
+ * @return  void
+ * @param   
+ * @author  Alvino Rodrigues
+*/
+function exibirMapa() {
+    jQuery('.mapas-cidade').on('click',function() {
+        jQuery(this).parent('').toggleClass('ativo');
+    });
 }
