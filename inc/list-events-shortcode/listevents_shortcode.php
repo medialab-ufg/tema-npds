@@ -10,14 +10,19 @@ class ListEventsShortcode {
     }
 
     function addScripts() {
+        
         wp_enqueue_style('list-events-css-daterangepicker', get_stylesheet_directory_uri() . '/inc/list-events-shortcode/css/daterangepicker.css');
         wp_enqueue_style('glyphicons-list', get_stylesheet_directory_uri() . '/inc/list-events-shortcode/css/glyphicons.css' );
         wp_enqueue_style('new-list-events-shortcode', get_stylesheet_directory_uri() . '/inc/list-events-shortcode/css/new-list-events.css' );
 
-        wp_enqueue_script('jquery');
-        wp_enqueue_script('moment', get_stylesheet_directory_uri() . '/inc/list-events-shortcode/js/moment.min.js');
-        wp_enqueue_script('list-events-js-daterangepicker', get_stylesheet_directory_uri() . '/inc/list-events-shortcode/js/daterangepicker.js');
-        wp_enqueue_script('listevents-ajax-script', get_stylesheet_directory_uri() . '/inc/list-events-shortcode/js/app.js', array('jquery'));
+        if (is_singular('npd') || get_query_var('npds_tpl')) {
+    
+            wp_enqueue_script('jquery');
+            wp_enqueue_script('moment', get_stylesheet_directory_uri() . '/inc/list-events-shortcode/js/moment.min.js');
+            wp_enqueue_script('list-events-js-daterangepicker', get_stylesheet_directory_uri() . '/inc/list-events-shortcode/js/daterangepicker.js');
+            wp_enqueue_script('listevents-ajax-script', get_stylesheet_directory_uri() . '/inc/list-events-shortcode/js/app.js', array('jquery'));
+        }
+        
     }
 
 
