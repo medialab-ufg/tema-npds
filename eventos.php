@@ -7,7 +7,7 @@
 
 <?php if (is_single()): ?>
 	
-	<div class="row justify-content-md-center max-large no-gutters">
+	<div class="row justify-content-center max-large px-4 px-md-0 no-gutters">
 		<div class="col-md-11">
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb">

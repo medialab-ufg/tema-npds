@@ -337,10 +337,10 @@ img.list_events_image {
 - BREADCRUMB
 */
 
-nav[aria-label='breadcrumb'] { border: none; }
+nav[aria-label='breadcrumb'] { border: none !important; }
 nav[aria-label='breadcrumb'] .breadcrumb {
-	margin-left: 0;
-	margin-bottom: 0;
+	margin-left: 0 !important;
+	margin-bottom: 0 !important;
 }
 .breadcrumb-item + .breadcrumb-item { padding-left: 5px; }
 .breadcrumb-item + .breadcrumb-item::before { padding-right: 5px; }
@@ -354,6 +354,10 @@ nav[aria-label='breadcrumb'] .breadcrumb {
 /*
 - MEDIA QUERIES
 */
+
+@media only screen and (max-width: 1100px) {
+	.box-contato .tainacan-title { margin-bottom: 70px; }
+}
 
 @media only screen and (max-width: 992px) {
 	.list_events__box { padding: 20px; }
