@@ -166,9 +166,12 @@ img.list_events_image {
 .lista-profissionais__imagem {
 	width: 100%;
 	max-width: 210px;
-	height: 240px;
 	margin-right: 20px;
-	background-color: #ccc;
+}
+.lista-profissionais__imagem img {
+	width: 100%;
+	height: auto;
+	display: block;
 }
 .lista-profissionais__texto { width: 100%; }
 .lista-profissionais__categoria {
@@ -180,6 +183,7 @@ img.list_events_image {
 	text-transform: uppercase;
 	display: block;
 }
+.lista-profissionais__categoria a { color: #00245D; }
 .lista-profissionais__nome {
 	font-weight: 700;
 	font-family: 'Roboto', sans-serif;

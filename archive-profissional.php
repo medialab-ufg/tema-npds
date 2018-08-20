@@ -26,43 +26,14 @@
 								<div class="col-md-6">
 									<div class="lista-profissionais__item">
 										<div class="lista-profissionais__imagem">
-											<img src="" alt="">
+											<?php if ( has_post_thumbnail() ) {
+												the_post_thumbnail();
+											} ?>
 										</div>
 										<div class="lista-profissionais__texto">
-											<?php
-												$terms = get_the_terms( $post->ID, 'type_area' );
-												if(!empty($terms)) {
-													$output = array();
-													foreach ($terms as $term) {
-														$output[] = $term->name;
-													}
-											?>
-
-											<span class="lista-profissionais__categoria"><?php echo join( ', ', $output ); ?></span>
-
-											<?php
-												}
-											?>
-
+											<span class="lista-profissionais__categoria"><?php the_terms( $post->ID, 'type-area', '', ', ', ' ' );?></span>
 											<strong class="lista-profissionais__nome"><?php the_title(); ?></strong>
-
-											<?php
-												$terms = get_the_terms( $post->ID, 'type_especialidade' );
-												if(!empty($terms)) {
-													$output = array();
-													foreach ($terms as $term) {
-														$output[] = $term->name;
-													}
-											?>
-
-												<span class="lista-profissionais__dado"><b>Especialidades:</b> 
-													<?php echo join( ', ', $output ); ?>
-												</span>
-
-											<?php
-												}
-											?>
-
+											<span class="lista-profissionais__dado"><?php the_terms( $post->ID, 'type_especialidade', '<b>Especialidades:</b> ', ', ', ' ' );?></span>
 											<span class="lista-profissionais__dado"><b>Cidade:</b> <?php echo get_post_meta($post->ID, 'profissionais_cidade', true); ?> - <?php echo get_post_meta($post->ID, 'profissionais_estado', true); ?></span>
 											<span class="lista-profissionais__dado"><b>Telefone:</b> <?php echo get_post_meta($post->ID, 'profissionais_telefone', true); ?></span>
 											<span class="lista-profissionais__dado"><b>E-mail:</b> <?php echo get_post_meta($post->ID, 'profissionais_email', true); ?></span>
@@ -93,5 +64,3 @@
 ?>
 
 <?php get_footer(); ?>
-
-<?php /*the_time('F jS, Y') ?></strong> by <?php the_author_posts_link() */?>
