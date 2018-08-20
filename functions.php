@@ -22,6 +22,7 @@ function new_post_types() {
 			'add_new' => 'Adicionar novo NPD',
 			'edit_item' => 'Editar NPD',
 			'all_items' => 'Todos os NPDs',
+			'attributes' => 'Configurações',
 			'singular_name' => 'NPD'
 		),
 		'show_in_rest' => true,
