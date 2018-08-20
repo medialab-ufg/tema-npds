@@ -4,9 +4,7 @@
             <h1 class="mb-0 text-truncate">
                 <?php bloginfo('blogtitle'); ?>
             </h1>
-            <!-- descomentar linhha do php abaixo para estilizar a segunda linha do título do site issue #8
             <p><?php bloginfo('description'); ?></p>
-            -->
         </div>
     </div>
 </div>

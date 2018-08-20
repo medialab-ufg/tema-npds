@@ -32,6 +32,24 @@
 	padding: 0;
 	border: none;
 }
+.page-header {
+	height: 531px !important;
+	display: block !important;
+	padding-top: 318px !important;
+	background-image: url(../../../assets/images/header.png) !important;
+}
+.page-header .title-header { max-height: none !important; }
+.page-header .title-header.singular-title {
+	padding-top: 14px !important;
+	padding-right: 117px !important;
+	padding-bottom: 11px !important;
+}
+.page-header .title-header h1 { font-size: 46pt !important; }
+.page-header .title-header p {
+	margin: 0 !important;
+	font-size: 25pt !important;
+}
+.page-header .title-header h1 + p { margin-top: -14px !important; }
 
 /*
 - FILTRO
@@ -416,6 +434,46 @@ nav[aria-label='breadcrumb'] .breadcrumb {
 	width: 100%;
 	height: 350px;
 	background-color: grey;
+}
+
+/*
+- HOME
+*/
+
+.tainacan-single-post h2 {
+	margin-bottom: 77px;
+	padding-bottom: 3px;
+	font-weight: 500;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20pt;
+	color: #00245D;
+	line-height: normal;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	border-bottom: 2px solid #008698;
+}
+.tainacan-single-post h3 {
+	margin-bottom: 20px;
+	font-weight: 700;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18pt;
+	color: #008698;
+	line-height: normal;
+}
+.tainacan-single-post .tainacan-content p {
+	margin-bottom: 20px;
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14pt;
+	color: #4D4D4D;
+	line-height: normal;
+}
+.has-2-columns {
+	margin: 0 -40px;
+}
+.has-2-columns .wp-block-column {
+	padding: 0 40px;
 }
 
 /*

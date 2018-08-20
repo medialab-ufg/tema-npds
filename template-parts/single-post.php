@@ -11,7 +11,7 @@
     </div>
     <section class="tainacan-content text-black">
         <div class="row justify-content-md-center">
-            <div class="col-md-8">
+            <div class="col-md-11">
                 <?php
                     the_content();
                     wp_link_pages();
