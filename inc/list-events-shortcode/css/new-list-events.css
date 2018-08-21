@@ -32,6 +32,11 @@
 	padding: 0;
 	border: none;
 }
+
+/*
+- CABEÇALHO
+*/
+
 .page-header {
 	height: 531px !important;
 	display: block !important;
@@ -159,6 +164,7 @@ img.list_events_image {
 .tainacan-title .title-1 { margin-bottom: 0; }
 .tainacan-title { margin-bottom: 20px; }
 .tainacan-title--type-b { margin-bottom: 115px; }
+.tainacan-title--type-c { margin-bottom: 85px; }
 .tainacan-single-post .header-meta time { font-size: 14pt; }
 .tainacan-single-post article header .post-details {
 	margin-bottom: 70px;
@@ -469,12 +475,51 @@ nav[aria-label='breadcrumb'] .breadcrumb {
 	color: #4D4D4D;
 	line-height: normal;
 }
-.has-2-columns {
-	margin: 0 -40px;
+.has-2-columns { margin: 0 -40px; }
+.has-2-columns .wp-block-column { padding: 0 40px; }
+
+/* BOX DE NOTÍCIAS */
+
+.box-noticias__lista {
+	padding: 0;
+	list-style-type: none;
 }
-.has-2-columns .wp-block-column {
-	padding: 0 40px;
+.box-noticias__lista li {
+	margin: 13px 0 0;
+	padding: 32px 0 0;
+	break-inside: avoid-column;
+	border-top: 1px solid #CFCFCF;
 }
+.box-noticias__lista li:first-child {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+.box-noticias__titulo {
+	margin: 0 0 19px;
+	font-weight: 700;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18pt;
+	color: #008698;
+	line-height: normal;
+}
+.box-noticias__lista p {
+	margin: 0 0 22px;
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14pt;
+	color: #4D4D4D;
+	line-height: normal;
+}
+.box-noticias__mais { text-align: right; }
+.box-noticias__mais a {
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14pt;
+	color: #008698;
+	line-height: normal;
+}
+
 
 /*
 - REGRAS GERAIS

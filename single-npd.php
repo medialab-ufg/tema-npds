@@ -62,6 +62,73 @@
 
         <div class="row justify-content-md-center">
             <div class="col-md-11">
+                <div class="box-noticias">
+                    <div class="tainacan-title tainacan-title--type-c">
+                        <h2 class="title-1">Notícias</h2>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-lg-9">
+                            <div class="row justify-content-around">
+                                <div class="col-md-5">
+                                    <ul class="box-noticias__lista">
+                                        <li>
+                                            <h3 class="box-noticias__titulo">Lorem Ipsum</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus convallis egestas erat non aliquet. Phasellus porta pulvinar...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus convallis egestas erat non aliquet. Phasellus porta pulvinar...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus convallis egestas erat non aliquet. Phasellus porta pulvinar...</p>
+                                            <div class="box-noticias__mais">
+                                                <a href="#">Leia mais...</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <h3 class="box-noticias__titulo">Lorem Ipsum</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus convallis egestas erat non aliquet. Phasellus porta pulvinar...</p>
+                                            <div class="box-noticias__mais">
+                                                <a href="#">Leia mais...</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <h3 class="box-noticias__titulo">Lorem Ipsum</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus convallis egestas erat non aliquet. Phasellus porta pulvinar...</p>
+                                            <div class="box-noticias__mais">
+                                                <a href="#">Leia mais...</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-5">
+                                    <ul class="box-noticias__lista">
+                                        <li>
+                                            <h3 class="box-noticias__titulo">Lorem Ipsum</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus convallis egestas erat non aliquet. Phasellus porta pulvinar...</p>
+                                            <div class="box-noticias__mais">
+                                                <a href="#">Leia mais...</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <h3 class="box-noticias__titulo">Lorem Ipsum</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus convallis egestas erat non aliquet. Phasellus porta pulvinar...</p>
+                                            <div class="box-noticias__mais">
+                                                <a href="#">Leia mais...</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <h3 class="box-noticias__titulo">Lorem Ipsum</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus convallis egestas erat non aliquet. Phasellus porta pulvinar...</p>
+                                            <div class="box-noticias__mais">
+                                                <a href="#">Leia mais...</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-md-center">
+            <div class="col-md-11">
                 <div class="box-contato">
                     <div class="tainacan-title">
                         <h2 class="title-1">Contato</h2>
