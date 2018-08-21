@@ -11,7 +11,7 @@
 ?>
 		<div class="row justify-content-md-center">
 			<div class="col-md-11">
-				<div class="tainacan-title">
+				<div class="tainacan-title tainacan-title--type-c">
 					<h2 class="title-1">Banco de profissionais</h2>
 				</div>
 				<!--
