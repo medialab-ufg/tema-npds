@@ -64,7 +64,7 @@
             <div class="col-md-11">
                 <div class="box-noticias">
                     <div class="tainacan-title tainacan-title--type-c">
-                        <h2 class="title-1">Notícias</h2>
+                        <h2 class="title-1">Notícias <a class="extra-option" href="#">Ver mais</a></h2>
                     </div>
 
                     <div class="row justify-content-center">
