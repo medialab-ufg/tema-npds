@@ -20,17 +20,17 @@
 	
 	<?php if ($noticias->have_posts()): ?>
 	
-		<div class="row justify-content-md-center">
-			<div class="col-md-11">
-				<div class="box-noticias">
-					<div class="tainacan-title tainacan-title--type-c">
-						<h2 class="title-1">Notícias <a class="extra-option" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">Ver mais</a></h2>
-					</div>
+		<div class="row">
+			<div class="col-sm margin-one-column">
+				<div class="row justify-content-md-center">
+					<div class="col-md-11">
+						<div class="box-noticias">
+							<div class="tainacan-title tainacan-title--type-c">
+								<h2 class="title-1">Notícias <a class="extra-option" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">Ver mais</a></h2>
+							</div>
 
-					<div class="row justify-content-center">
-						<div class="col-lg-9">
-							<div class="row justify-content-around">
-								<div class="col-md-5">
+							<div class="row justify-content-center">
+								<div class="col-lg-9">
 									<ul class="box-noticias__lista">
 										
 										<?php while ($noticias->have_posts()): $noticias->the_post(); ?>
@@ -47,14 +47,13 @@
 										
 									</ul>
 								</div>
-								
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		
+
 	<?php endif; ?>
 	<?php wp_reset_postdata(); ?>
 	
