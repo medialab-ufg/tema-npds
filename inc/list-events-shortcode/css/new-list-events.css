@@ -39,8 +39,8 @@
 
 .page-header {
 	height: 531px !important;
-	display: block !important;
 	padding-top: 318px !important;
+	align-items: flex-start !important;
 	background-image: url(../../../assets/images/header.png) !important;
 }
 .page-header .title-header { max-height: none !important; }
@@ -49,12 +49,17 @@
 	padding-right: 117px !important;
 	padding-bottom: 11px !important;
 }
-.page-header .title-header h1 { font-size: 46pt !important; }
+.page-header .title-header h1 { font-size: 46px !important; }
 .page-header .title-header p {
 	margin: 0 !important;
-	font-size: 25pt !important;
+	font-size: 25px !important;
 }
-.page-header .title-header h1 + p { margin-top: -14px !important; }
+.page-header .title-header h1 + p {
+	margin-top: -14px !important;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
 
 /*
 - FILTRO

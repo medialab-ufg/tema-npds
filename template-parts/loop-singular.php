@@ -8,8 +8,12 @@
 			</div>
 		</div>
 
-		<div class="tainacan-single-post">
-			<?php get_template_part('template-parts/single-post'); ?>
+		<div class="row justify-content-md-center">
+			<div class="col-md-11">
+				<div class="tainacan-single-post">
+					<?php get_template_part('template-parts/single-post'); ?>
+				</div>
+			</div>
 		</div>
 	<?php endwhile; ?>
 <?php else: ?>
