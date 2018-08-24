@@ -24,7 +24,11 @@
 <?php endif; ?>
 
 <main role="main" class="mt-5 max-large px-4 px-md-0">
-	<?php get_template_part('template-parts/loop', 'singular'); ?>
+    <div class="row justify-content-md-center">
+        <div class="col-md-11">
+	       <?php get_template_part('template-parts/loop', 'singular'); ?>
+        </div>
+    </div>
 
 
     <div class="npds-list">
@@ -41,7 +45,16 @@
 
         <?php foreach($children as $child): ?>
                 <div class="npds-list__item">
-                    <h2 class="title-1"><a href="<?php echo get_permalink($child->ID); ?>"><?php echo $child->post_title; ?></a></h2>
+                    <div class="tainacan-title">
+                        <div class="border-bottom mb-5 border-jelly-bean tainacan-title-page" style="border-width: 2px !important;">
+                            <ul class="list-inline mb-1">
+                                <li class="list-inline-item text-midnight-blue font-weight-bold title-page">
+                                    <a href="<?php echo get_permalink($child->ID); ?>"><?php echo $child->post_title; ?></a>
+                                </li>
+                                <!-- <li class="list-inline-item float-right title-back"><a href="javascript:history.go(-1)"><?php _e('Back', 'tainacan-theme'); ?></a></li> -->
+                            </ul>
+                        </div>
+                    </div>
                     <div class="row justify-content-md-center">
                         <div class="col-md-8">
                             <p><?php echo wp_trim_words($child->post_content, 60); ?></p>
@@ -64,8 +77,15 @@
             <div class="col-md-11">
                 <div class="box-contato">
                     <div class="tainacan-title">
-                        <h2 class="title-1">Contato</h2>
+                    <div class="border-bottom mb-5 border-jelly-bean tainacan-title-page" style="border-width: 2px !important;">
+                        <ul class="list-inline mb-1">
+                            <li class="list-inline-item text-midnight-blue font-weight-bold title-page">
+                                Contato
+                            </li>
+                            <!-- <li class="list-inline-item float-right title-back"><a href="javascript:history.go(-1)"><?php _e('Back', 'tainacan-theme'); ?></a></li> -->
+                        </ul>
                     </div>
+                </div>
 
                     <div class="row justify-content-center">
                         <div class="col-12 col-lg-8">

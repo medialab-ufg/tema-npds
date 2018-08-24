@@ -11,8 +11,15 @@
 ?>
 	<div class="row justify-content-md-center">
 		<div class="col-md-11">
-			<div class="tainacan-title tainacan-title--type-b">
-				<h2 class="title-1">NPDs no mapa - Localização</h2>
+			<div class="tainacan-title">
+				<div class="border-bottom mb-5 border-jelly-bean tainacan-title-page" style="border-width: 2px !important;">
+					<ul class="list-inline mb-1">
+						<li class="list-inline-item text-midnight-blue font-weight-bold title-page">
+							NPDs no mapa - Localização
+						</li>
+						<!-- <li class="list-inline-item float-right title-back"><a href="javascript:history.go(-1)"><?php _e('Back', 'tainacan-theme'); ?></a></li> -->
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -167,7 +167,7 @@ img.list_events_image {
 /* MUDANÇAS DO CSS ANTIGO */
 
 .tainacan-title .title-1 { margin-bottom: 0; }
-.tainacan-title { margin-bottom: 20px; }
+/*.tainacan-title { margin-bottom: 20px; }*/
 .tainacan-title--type-b { margin-bottom: 115px; }
 .tainacan-title--type-c { margin-bottom: 85px; }
 .tainacan-single-post article header .post-details {
@@ -539,6 +539,7 @@ nav[aria-label='breadcrumb'] .breadcrumb {
 */
 
 .tainacan-details { margin-bottom: 63px; }
+.tainacan-title .tainacan-title-page .title-page a { color: inherit; }
 
 /*
 - MEDIA QUERIES

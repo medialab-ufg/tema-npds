@@ -11,14 +11,16 @@
 ?>
 		<div class="row justify-content-md-center">
 			<div class="col-md-11">
-				<div class="tainacan-title tainacan-title--type-c">
-					<h2 class="title-1">Banco de profissionais</h2>
+				<div class="tainacan-title">
+					<div class="border-bottom mb-5 border-jelly-bean tainacan-title-page" style="border-width: 2px !important;">
+						<ul class="list-inline mb-1">
+							<li class="list-inline-item text-midnight-blue font-weight-bold title-page">
+								Banco de profissionais
+							</li>
+							<!-- <li class="list-inline-item float-right title-back"><a href="javascript:history.go(-1)"><?php _e('Back', 'tainacan-theme'); ?></a></li> -->
+						</ul>
+					</div>
 				</div>
-				<!--
-				<div class="header-meta text-muted post-details tainacan-details">
-					Atualizado em <?php tainacan_post_date(); ?>.
-				</div>
-				-->
 			</div>
 		</div>
 
