@@ -169,6 +169,8 @@ img.list_events_image {
 	margin-bottom: 70px;
 	font-size: 14px;
 }
+.tainacan-single-post article header .post-details a,
+.tainacan-list-post .blog-post .blog-content a[rel="author"] { color: #298596; }
 .tainacan-single-post article .tainacan-content { margin-bottom: 118px; }
 .tainacan-single-post article .tainacan-content p {
 	font-weight: 400;
