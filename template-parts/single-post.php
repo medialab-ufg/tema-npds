@@ -3,7 +3,9 @@
         <div class="col-md-11">
             <header>
                 <div class="header-meta text-muted post-details">
-                    <?php tainacan_post_date(); ?> <?php printf(__('por %s', 'tainacan-theme'), get_the_author_posts_link()); ?>
+                    <?php if(!is_singular('page')) { ?>
+                        <?php tainacan_post_date(); ?> <?php printf(__('por %s', 'tainacan-theme'), get_the_author_posts_link()); ?>
+                    <?php } ?>
                 </div>
                 <?php the_post_thumbnail(); ?>
             </header>
