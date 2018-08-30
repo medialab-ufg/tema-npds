@@ -11,7 +11,7 @@
 	<?php endif; ?>
     <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> npds-theme-page>
         
     <nav class="navbar navbar-expand-md navbar-light bg-white menu-shadow px-0">
         <div class="container-fluid max-large px-0 margin-one-column" id="topNavbar">
