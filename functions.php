@@ -320,87 +320,10 @@ require_once('inc/list-events-shortcode/listevents_shortcode.php');
 require_once('inc/rewrite-rules.php');
 
 /**
- * Enqueues front-end CSS for color scheme.
- *
- * @since Tainacan Theme
- *
- * @see wp_add_inline_style()
+ * Adiciona classes extras à lista de elementos que mudam de cor de acordo com a preferência do usuário
+ * 
  */
-function tainacan_npds_color_scheme_css() {
-	$color_scheme_option = get_theme_mod( 'color_scheme', 'default' );
-
-	$color_scheme = tainacan_get_color_scheme();
-
-	// Convert main text hex color to rgba.
-	$color_textcolor_rgb = tainacan_hex2rgb( $color_scheme[2] );
-
-	// If the rgba values are empty return early.
-	if ( empty( $color_textcolor_rgb ) ) {
-		return;
-	}
-
-	// If we get this far, we have a custom color scheme.
-	$colors = array(
-		'background_color'      => $color_scheme[0],
-		'page_background_color' => $color_scheme[1],
-		'link_color'            => $color_scheme[2],
-		'backtransparent'			=> vsprintf( 'rgba( %1$s, %2$s, %3$s, 0.5)', $color_textcolor_rgb )
-	);
-
-	$color_scheme_css = tainacan_npds_get_color_scheme_css( $colors );
-
-	echo '<style type="text/css" id="npds-custom-theme-css">' .
-	$color_scheme_css . '</style>';
+function add_class_customize($colors) {
+    return ".box-noticias__titulo { color: {$colors['link_color']}; }";
 }
-add_action( 'wp_head', 'tainacan_npds_color_scheme_css' );
-
-/**
- * Returns CSS for the color schemes.
- *
- * @since Tainacan Theme
- *
- * @param array $colors Color scheme colors.
- * @return string Color scheme CSS.
- */
-function tainacan_npds_get_color_scheme_css( $colors ) {
-	$colors = wp_parse_args( $colors, array(
-		'background_color'      => '',
-		'page_background_color' => '',
-		'link_color'            => '',
-		'backtransparent'           => '',
-	) );
-
-	return <<<CSS
-	/* Color Scheme */
-
-	.box-noticias__titulo { color: {$colors['link_color']}; }
-
-CSS;
-}
-
-
-/**
- * Outputs an Underscore template for generating CSS for the color scheme.
- *
- * The template generates the css dynamically for instant display in the
- * Customizer preview.
- *
- * @since Tainacan Theme
- */
-function tainacan_npds_color_scheme_css_template() {
-	$colors = array(
-		'background_color'      => '{{ data.background_color }}',
-		'page_background_color' => '{{ data.page_background_color }}',
-		'link_color'            => '{{ data.link_color }}',
-		'backtransparent'		=> '{{ data.backtransparent }}',/* 
-		'main_text_color'       => '{{ data.main_text_color }}',
-		'secondary_text_color'  => '{{ data.secondary_text_color }}',
-		'border_color'          => '{{ data.border_color }}', */
-	);
-	?>
-	<script type="text/html" id="tmpl-tainacan-npds-color-scheme">
-		<?php echo tainacan_npds_get_color_scheme_css( $colors ); ?>
-	</script>
-	<?php
-}
-add_action( 'customize_controls_print_footer_scripts', 'tainacan_npds_color_scheme_css_template' );
+add_filter('tainacan_customize_colors', 'add_class_customize');

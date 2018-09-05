@@ -37,48 +37,48 @@
 - CABEÇALHO
 */
 
-.npds-theme-page .page-header {
+/*.page-header {
 	height: 531px !important;
 	padding-top: 318px !important;
 	align-items: flex-start !important;
 	background-image: url(../../../assets/images/header.png) !important;
 }
-.npds-theme-page .page-header .title-header { max-height: none !important; }
-.npds-theme-page .page-header .title-header.singular-title {
+.page-header .title-header { max-height: none !important; }
+.page-header .title-header.singular-title {
 	padding-top: 14px !important;
 	padding-right: 117px !important;
 	padding-bottom: 11px !important;
 }
-.npds-theme-page .page-header .title-header h1 { font-size: 46px !important; }
-.npds-theme-page .page-header .title-header p {
+.page-header .title-header h1 { font-size: 46px !important; }
+.page-header .title-header p {
 	margin: 0 !important;
 	font-size: 25px !important;
 }
-.npds-theme-page .page-header .title-header h1 + p {
+.page-header .title-header h1 + p {
 	margin-top: -14px !important;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
-}
+}*/
 
 /*
 - FILTRO
 */
 
-.npds-theme-page #date_listevents { margin-top: 0; }
-.npds-theme-page .filter-box {
+#date_listevents { margin-top: 0; }
+.filter-box {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
 }
-.npds-theme-page .filter-box:before,
-.npds-theme-page .filter-box:after {
+.filter-box:before,
+.filter-box:after {
 	content: "";
 	display: table;
 } 
-.npds-theme-page .filter-box:after { clear: both; }
+.filter-box:after { clear: both; }
 
-.npds-theme-page .box-states {
+.box-states {
 	margin-top: 10px;
 	clear: both;
 }
@@ -166,18 +166,18 @@ img.list_events_image {
 
 /* MUDANÇAS DO CSS ANTIGO */
 
-.npds-theme-page .tainacan-title .title-1 { margin-bottom: 0; }
+.tainacan-title .title-1 { margin-bottom: 0; }
 /*.tainacan-title { margin-bottom: 20px; }*/
 .tainacan-title--type-b { margin-bottom: 115px; }
 .tainacan-title--type-c { margin-bottom: 85px; }
-.npds-theme-page .tainacan-single-post article header .post-details {
+.tainacan-single-post article header .post-details {
 	margin-bottom: 70px;
 	font-size: 14px;
 }
-.npds-theme-page .tainacan-single-post article header .post-details a,
-.npds-theme-page .tainacan-list-post .blog-post .blog-content a[rel="author"] { color: #298596; }
-.npds-theme-page .tainacan-single-post article .tainacan-content { margin-bottom: 118px; }
-.npds-theme-page .tainacan-single-post article .tainacan-content p {
+.tainacan-single-post article header .post-details a,
+.tainacan-list-post .blog-post .blog-content a[rel="author"] { color: #298596; }
+.tainacan-single-post article .tainacan-content { margin-bottom: 118px; }
+.tainacan-single-post article .tainacan-content p {
 	font-weight: 400;
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
@@ -372,13 +372,13 @@ img.list_events_image {
 - BREADCRUMB
 */
 
-.npds-theme-page nav[aria-label='breadcrumb'] { border: none !important; }
-.npds-theme-page nav[aria-label='breadcrumb'] .breadcrumb {
+nav[aria-label='breadcrumb'] { border: none !important; }
+nav[aria-label='breadcrumb'] .breadcrumb {
 	margin-left: 0 !important;
 	margin-bottom: 0 !important;
 }
-.npds-theme-page .breadcrumb-item + .breadcrumb-item { padding-left: 5px; }
-.npds-theme-page .breadcrumb-item + .breadcrumb-item::before { padding-right: 5px; }
+.breadcrumb-item + .breadcrumb-item { padding-left: 5px; }
+.breadcrumb-item + .breadcrumb-item::before { padding-right: 5px; }
 
 /*
 - MAPAS
@@ -452,7 +452,7 @@ img.list_events_image {
 - HOME
 */
 
-.npds-theme-page .tainacan-single-post h2 {
+.tainacan-single-post h2 {
 	margin-bottom: 77px;
 	padding-bottom: 3px;
 	font-weight: 500;
@@ -465,7 +465,7 @@ img.list_events_image {
 	align-items: flex-end;
 	border-bottom: 2px solid #008698;
 }
-.npds-theme-page .tainacan-single-post h3 {
+.tainacan-single-post h3 {
 	margin-bottom: 20px;
 	font-weight: 700;
 	font-family: 'Roboto', sans-serif;
@@ -473,7 +473,7 @@ img.list_events_image {
 	color: #008698;
 	line-height: normal;
 }
-.npds-theme-page .tainacan-single-post .tainacan-content p {
+.tainacan-single-post .tainacan-content p {
 	margin-bottom: 20px;
 	font-weight: 400;
 	font-family: 'Roboto', sans-serif;
@@ -481,8 +481,8 @@ img.list_events_image {
 	color: #4D4D4D;
 	line-height: normal;
 }
-.npds-theme-page .has-2-columns { margin: 0 -40px; }
-.npds-theme-page .has-2-columns .wp-block-column { padding: 0 40px; }
+.has-2-columns { margin: 0 -40px; }
+.has-2-columns .wp-block-column { padding: 0 40px; }
 
 /* BOX DE NOTÍCIAS */
 
@@ -536,8 +536,8 @@ img.list_events_image {
 - REGRAS GERAIS
 */
 
-.npds-theme-page .tainacan-details { margin-bottom: 63px; }
-.npds-theme-page .tainacan-title .tainacan-title-page .title-page a { color: inherit; }
+.tainacan-details { margin-bottom: 63px; }
+.tainacan-title .tainacan-title-page .title-page a { color: inherit; }
 
 /*
 - MEDIA QUERIES
@@ -548,8 +548,8 @@ img.list_events_image {
 }
 
 @media only screen and (max-width: 992px) {
-	.npds-theme-page .list_events__box { padding: 20px; }
-	.npds-theme-page .list_events_item { padding: 30px 0; }
+	.list_events__box { padding: 20px; }
+	.list_events_item { padding: 30px 0; }
 }
 
 @media only screen and (max-width: 700px) {
