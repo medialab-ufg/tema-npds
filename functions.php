@@ -324,6 +324,6 @@ require_once('inc/rewrite-rules.php');
  * 
  */
 function add_class_customize($colors) {
-    return ".box-noticias__titulo { color: {$colors['link_color']}; }";
+	return ".box-noticias__titulo { color: {$colors['link_color']}; }";
 }
-add_filter('tainacan_customize_colors', 'add_class_customize');
+add_filter('tainacan-customize-css-class', 'add_class_customize');
