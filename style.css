@@ -11,3 +11,5 @@
  Text Domain:  tainacan
  Template:     tainacan-interface
 */
+
+.page-header .title-header { max-height: 115px; }
